@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="XWo-i5-fUG">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="rWI-6w-PWO" appends="YES" id="IO3-Dd-3Wh"/>
+                                </connections>
+                            </view>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TBV-1P-GjD">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="970-KC-Wxw" appends="YES" id="iJ2-eD-Hok"/>
+                                </connections>
+                            </imageView>
+                            <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXH-qe-WKl">
+                                <rect key="frame" x="0.0" y="600" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="M4h-TX-BEo"/>
+                                </constraints>
+                                <items/>
+                            </toolbar>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gC2-qA-Hmh">
+                                <rect key="frame" x="552" y="518" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="PpB-8R-hG0"/>
+                                    <constraint firstAttribute="width" constant="32" id="lxQ-xB-KVi"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="close.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btn_close_press:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6p4-aP-zmi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jXH-qe-WKl" firstAttribute="top" secondItem="2fi-mo-0CV" secondAttribute="top" id="13W-CG-Fvv"/>
+                            <constraint firstItem="XWo-i5-fUG" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="4rk-R5-XvT"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="XWo-i5-fUG" secondAttribute="bottom" id="9Jn-3K-L2L"/>
+                            <constraint firstAttribute="trailing" secondItem="XWo-i5-fUG" secondAttribute="trailing" id="Ccw-Hg-XQ6"/>
+                            <constraint firstAttribute="trailing" secondItem="gC2-qA-Hmh" secondAttribute="trailing" constant="16" id="Eky-7H-Z9B"/>
+                            <constraint firstItem="jXH-qe-WKl" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="PyS-mv-wac"/>
+                            <constraint firstAttribute="centerX" secondItem="jXH-qe-WKl" secondAttribute="centerX" id="Tbp-w7-0Ma"/>
+                            <constraint firstAttribute="trailing" secondItem="TBV-1P-GjD" secondAttribute="trailing" id="Yny-hG-925"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="gC2-qA-Hmh" secondAttribute="bottom" constant="50" id="cNL-TR-M5u"/>
+                            <constraint firstAttribute="trailing" secondItem="jXH-qe-WKl" secondAttribute="trailing" id="dZn-td-zLZ"/>
+                            <constraint firstItem="XWo-i5-fUG" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="ffP-CM-cvg"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="TBV-1P-GjD" secondAttribute="bottom" id="ihz-0Y-3Bp"/>
+                            <constraint firstItem="TBV-1P-GjD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="kaA-eT-Y3C"/>
+                            <constraint firstItem="TBV-1P-GjD" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="pRW-kD-tE2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btn_close" destination="gC2-qA-Hmh" id="Qo8-rs-k5p"/>
+                        <outlet property="captureImage" destination="TBV-1P-GjD" id="l72-4t-wX2"/>
+                        <outlet property="imagePreview" destination="XWo-i5-fUG" id="CwF-mC-LJJ"/>
+                        <outlet property="toolbar" destination="jXH-qe-WKl" id="rb3-gi-ENW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="rWI-6w-PWO">
+                    <connections>
+                        <action selector="cameraTabbed:" destination="vXZ-lx-hvc" id="2fL-5v-JlD"/>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="qXB-0h-s7Z"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="970-KC-Wxw">
+                    <connections>
+                        <action selector="stillImageTabbed:" destination="vXZ-lx-hvc" id="NoN-e9-DCP"/>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="d41-Ff-pN5"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close.png" width="32" height="32"/>
+    </resources>
+</document>
